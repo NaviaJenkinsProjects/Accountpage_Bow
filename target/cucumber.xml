@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="233.487" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Guest Login Page" name="User Login to Guest Id" time="73.184">
+<testsuite name="Cucumber" time="186.287" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Login Navia" time="57.209">
 <system-out><![CDATA[
-Given User Launch The Url...................................................passed
-When User Click The Login As Guest button...................................passed
-And User Click The Name.....................................................passed
-And User Click The Email....................................................passed
-And User Click The MobileNumber.............................................passed
-And User Click The Agree Icon...............................................passed
-And User Click The Login button in Guest login button.......................passed
-Then Next Page Shown........................................................passed
-When User Send The Mobile Otp and Verification..............................passed
-And User Click The Login button.............................................passed
+Given User Navigate to Navia................................................passed
+When User Click login with client code......................................passed
+And User Enter Client Code..................................................passed
+And User  Enter Password....................................................passed
+And User Click Agree CheckBox...............................................passed
+And User Click Login button.................................................passed
+And User Click Otp Verification and enter manualy...........................passed
+And User Click Login Again..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Guest Login Page" name="User Check  - Charts- functionality" time="159.386">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="User Change the Theme" time="7.295">
 <system-out><![CDATA[
-And User Click the Watch List...............................................passed
-And User mouse over the scrip "Nifty 50"....................................passed
-And User Click the Charts...................................................passed
-And User Click the Candles Icon.............................................passed
-And User Choose Candle "candle".............................................passed
-And User Click the Mintues..................................................passed
-And User Choose One Minute..................................................passed
-And Verify One Minute Feed Connection Value and Wait One Minute Very Feed Connection Changes.passed
-And User Click the Five Minute..............................................passed
-And Verify Five Minute Feed Connection Valuebb..............................passed
-And User Click One Day......................................................passed
-And Verify One Day Feed Connection Value and Wait One Minute Very Feed Connection Changes.passed
+When Navigate to home page..................................................passed
+When User Click Account page................................................passed
+When User Click "Light" and Change the Theme Automatically..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check the My Profile Functionality" time="82.091">
+<system-out><![CDATA[
+When Navigate to home page..................................................passed
+When User Click Account page................................................passed
+When User Click My Profile..................................................passed
+And User Click Email ,Phone Eye icon check button working or not............passed
+And User Click Email edit and navigate to Rekyc page get the Name ,UCC,Father/spouse name , Cilent ID and Pan.passed
+And User Scroll Down and Click Account Eye Icon.............................passed
+And User Click Phone Edit Icon and Check....................................passed
+And User Click Account Edit Icon............................................passed
+And User Click Bank Details Edit Icon.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check N coins Functionality" time="12.348">
+<system-out><![CDATA[
+When Navigate to home page..................................................passed
+When User Click Account page................................................passed
+When User Click N Coins.....................................................passed
+And Scroll Down Check the Brokerage & Charges...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Tour App" time="11.775">
+<system-out><![CDATA[
+When Navigate to home page..................................................passed
+When User Click Account page................................................passed
+When User Click Tour App and check..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Terms and Conditions" time="14.703">
+<system-out><![CDATA[
+When Navigate to home page..................................................passed
+When User Click Account page................................................passed
+When User Click terms and Conditions and Check..............................passed
 ]]></system-out>
 </testcase>
 </testsuite>
