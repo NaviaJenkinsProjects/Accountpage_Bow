@@ -35,31 +35,44 @@ public class BaseClass {
             WebDriverManager.chromedriver().setup();
 
             ChromeOptions options = new ChromeOptions();
+
+            // EAGER allows Selenium to continue once DOM is ready
             options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-//            System.out.println("Running in Headless Mode");
-//
-//            options.addArguments("--headless=new");
-//            options.addArguments("--no-sandbox");
-//            options.addArguments("--disable-dev-shm-usage");
-//     
-//            options.addArguments("--window-size=1920,1080");
-
             options.addArguments("--disable-extensions");
-            
             options.addArguments("--disable-notifications");
-        
+
+            // Optional - keep these disabled unless Jenkins needs them
+            // options.addArguments("--headless=new");
+            // options.addArguments("--no-sandbox");
+            // options.addArguments("--disable-dev-shm-usage");
 
             driver = new ChromeDriver(options);
-            wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-            driver.manage().window().setSize(new org.openqa.selenium.Dimension(1920, 1080));
+
+            driver.manage().window().setSize(
+                new org.openqa.selenium.Dimension(1920, 1080)
+            );
+
+            // IMPORTANT: controls driver.get() page loading time
+            driver.manage().timeouts()
+                  .pageLoadTimeout(Duration.ofSeconds(60));
+
+            // Element wait
+            driver.manage().timeouts()
+                  .implicitlyWait(Duration.ofSeconds(10));
+
+            wait = new WebDriverWait(
+                driver,
+                Duration.ofSeconds(15)
+            );
         }
 
         if (driver == null) {
-            throw new IllegalArgumentException("Unsupported browser: " + browser);
+            throw new IllegalArgumentException(
+                "Unsupported browser: " + browser
+            );
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }
 

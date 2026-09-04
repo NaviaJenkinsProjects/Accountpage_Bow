@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="186.287" tests="6" skipped="0" failures="0" errors="0">
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Login Navia" time="57.209">
+<testsuite name="Cucumber" time="205.641" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Login Navia" time="55.376">
 <system-out><![CDATA[
 Given User Navigate to Navia................................................passed
 When User Click login with client code......................................passed
@@ -12,14 +12,14 @@ And User Click Otp Verification and enter manualy...........................pass
 And User Click Login Again..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="User Change the Theme" time="7.295">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="User Change the Theme" time="7.309">
 <system-out><![CDATA[
 When Navigate to home page..................................................passed
 When User Click Account page................................................passed
 When User Click "Light" and Change the Theme Automatically..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check the My Profile Functionality" time="82.091">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check the My Profile Functionality" time="103.029">
 <system-out><![CDATA[
 When Navigate to home page..................................................passed
 When User Click Account page................................................passed
@@ -32,7 +32,7 @@ And User Click Account Edit Icon............................................pass
 And User Click Bank Details Edit Icon.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check N coins Functionality" time="12.348">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check N coins Functionality" time="12.581">
 <system-out><![CDATA[
 When Navigate to home page..................................................passed
 When User Click Account page................................................passed
@@ -40,14 +40,14 @@ When User Click N Coins.....................................................pass
 And Scroll Down Check the Brokerage & Charges...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Tour App" time="11.775">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Tour App" time="11.862">
 <system-out><![CDATA[
 When Navigate to home page..................................................passed
 When User Click Account page................................................passed
 When User Click Tour App and check..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Terms and Conditions" time="14.703">
+<testcase classname="Navia Account page Theme , My Profile , N Coins , Support , Keyboard shortcut, Tour App , App Feedback ,terms and Conditions and logout" name="Check Terms and Conditions" time="15.039">
 <system-out><![CDATA[
 When Navigate to home page..................................................passed
 When User Click Account page................................................passed

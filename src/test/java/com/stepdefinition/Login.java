@@ -610,11 +610,18 @@ public class Login extends BaseClass {
 
 	@When("User Click LTP")
 	public void user_click_ltp() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
-		WebElement element2 = driver.findElement(By.xpath("//iframe[@class='iframe_window']"));
+		try {
+			
+			WebElement element2 = driver.findElement(By.xpath("//iframe[@class='iframe_window']"));
+			
+			driver.switchTo().frame(element2);
+			
+		} catch (Exception e) {
+			
+		}
 		
-		driver.switchTo().frame(element2);
 		Actions d=new Actions(driver);
 
 		List<WebElement> elements = driver.findElements(By.xpath("//button[text()='LTP']"));
@@ -774,7 +781,7 @@ public class Login extends BaseClass {
 
 		WebElement UPI = driver.findElement(By.xpath("//input[@placeholder='example@okhdfcbank']"));
 
-		UPI.sendKeys("6374837965");
+		UPI.sendKeys("6374837965@ptsbi");
 		Thread.sleep(1000);
 
 		WebElement clickPayUsingUPI = driver.findElement(By.xpath("//button[text()='Verify and Pay']"));
@@ -1210,7 +1217,7 @@ public class Login extends BaseClass {
 
 		Thread.sleep(5000);
 
-		driver.findElement(By.xpath("//span[text()='"+string+"']//ancestor::div[@class='basket_box']")).click();
+		driver.findElement(By.xpath("(//span[text()='TEST']//ancestor::div[@class='basket_box'])[1]")).click();
 
 		Thread.sleep(1000);
 
@@ -2611,6 +2618,18 @@ public class Login extends BaseClass {
 
 		driver.findElement(By.xpath("//a[text()='Bank']//parent::li")).click();
 		Thread.sleep(1000);
+		
+		try {
+			
+			driver.findElement(By.xpath("(//a[contains(text(),'Ok')])[1]")).click();
+			Thread.sleep(1000);
+			
+			
+		} catch (Exception e) {
+			driver.findElement(By.xpath("(//a[contains(text(),'Cancel')])[1]")).click();
+			Thread.sleep(1000);
+		}
+		
 
 		driver.findElement(By.xpath("(//img[@class='icon show_icon'])[2]")).click();
 
@@ -2624,13 +2643,21 @@ public class Login extends BaseClass {
 
 		js.executeScript("window.scrollBy(0, 500)");
 		js.executeScript("window.scrollBy(0, 500)");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		
+		try {
+			
+			driver.findElement(By.xpath("//a[text()='Income Declaration']//parent::li")).click();
 
-		driver.findElement(By.xpath("//a[text()='Income Declaration']//parent::li")).click();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 
+		
 		js.executeScript("window.scrollBy(0, 500)");
 		js.executeScript("window.scrollBy(0, 500)");
-
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='Dis Slip Req']//parent::li")).click();
 
 		Thread.sleep(1000);
@@ -2779,7 +2806,17 @@ public class Login extends BaseClass {
 
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("(//img[@class='icon show_icon'])[1]")).click();
-
+		try {
+			
+			driver.findElement(By.xpath("(//a[contains(text(),'Ok')])[1]")).click();
+			Thread.sleep(1000);
+			
+			
+		} catch (Exception e) {
+			driver.findElement(By.xpath("(//a[contains(text(),'Cancel')])[1]")).click();
+			Thread.sleep(1000);
+		}
+		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("(//img[@class='icon show_icon'])[2]")).click();
 
