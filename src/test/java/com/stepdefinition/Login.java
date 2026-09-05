@@ -2658,7 +2658,17 @@ public class Login extends BaseClass {
 		js.executeScript("window.scrollBy(0, 500)");
 		js.executeScript("window.scrollBy(0, 500)");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[text()='Dis Slip Req']//parent::li")).click();
+		
+		try {
+			
+			driver.findElement(By.xpath("//a[text()='Dis Slip Req']//parent::li")).click();
+			
+		} catch (Exception e) {
+			
+			WebElement element = driver.findElement(By.xpath("//a[text()='Dis Slip Req']//parent::li"));
+		       js.executeScript("arguments[0].click();", element);
+		}
+		
 
 		Thread.sleep(1000);
 
@@ -2676,7 +2686,15 @@ public class Login extends BaseClass {
 		js.executeScript("window.scrollBy(0, 500)");
 		js.executeScript("window.scrollBy(0, 500)");
 
-		driver.findElement(By.xpath("//a[text()='Service Status ']//parent::li")).click();
+       try {
+			
+			driver.findElement(By.xpath("//a[text()='Service Status ']//parent::li")).click();
+			
+		} catch (Exception e) {
+			
+			WebElement element = driver.findElement(By.xpath("//a[text()='Service Status ']//parent::li"));
+		       js.executeScript("arguments[0].click();", element);
+		}
 		Thread.sleep(1000);
 
 		js.executeScript("window.scrollBy(0, 500)");
